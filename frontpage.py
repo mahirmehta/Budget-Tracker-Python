@@ -27,13 +27,12 @@ class MainWindow(QWidget):
          self.close()
 
     def ui(self):
-     self.setWindowTitle("Jai Rajani")
+     self.setWindowTitle("Python Project(029,030,041)")
      self.resize(400,400)
      
      
      #adding widgets
      intro=QLabel("BUDGET TRACKER")
-     credit=QLabel("Made by : Jai Rajani")
      button1=QPushButton("Expenditure")
      button2= QPushButton("Income")
      button3=QPushButton("Savings ")
