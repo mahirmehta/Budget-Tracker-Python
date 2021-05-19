@@ -36,7 +36,6 @@ class MainWindow(QWidget):
      button1=QPushButton("Expenditure")
      button2= QPushButton("Income")
      button3=QPushButton("Savings ")
-     button4= QPushButton("Settings")
      button5=QPushButton("Exit")
 
      button1.clicked.connect(lambda x:self.show_window(self.w1))
@@ -50,13 +49,11 @@ class MainWindow(QWidget):
      button1.setMinimumSize(QSize(100,50))
      button2.setMinimumSize(QSize(100,50))
      button3.setMinimumSize(QSize(100,50))
-     button4.setMinimumSize(QSize(100,50))
      button5.setMaximumSize(QSize(100,50))
      intro.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
      button1.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
      button2.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
      button3.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
-     button4.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
 
      #adding widgets to layout
      layout=QVBoxLayout()
@@ -68,7 +65,6 @@ class MainWindow(QWidget):
      layout2.addWidget(button1)
      layout2.addWidget(button2)
      layout2.addWidget(button3)
-     layout3.addWidget(button4)
      layout3.addWidget(button5)     
      layout.addLayout(layout1)
      layout.addLayout(layout2)
