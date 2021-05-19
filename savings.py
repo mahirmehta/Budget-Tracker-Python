@@ -71,7 +71,7 @@ class saving_window(QWidget):
         self.inc6=QLabel()
         self.tinc=QLabel()
         
-        self.master_layout=QStackedLayout()
+    
         
         layout2.addWidget(self.inc1)
         layout2.addWidget(self.inc2)
@@ -82,19 +82,8 @@ class saving_window(QWidget):
         layout2.addWidget(self.tinc)
         layout2.addWidget(exited2)
 
-        self.select_window=QMainWindow()
-        self.select_window.resize(75,50)
         
-        self.select_window.setWindowTitle("Select")
-       
-        select_layout=QVBoxLayout()
-        select_layout.addWidget(QLabel("Select the day"))
-        
-        select_widget=QWidget()
-        select_widget.setLayout(select_layout)
-        self.select_window.setCentralWidget(select_widget)
-        pg1=QWidget()
-        pg2=QWidget()
+   
         layout.addWidget(self.exp1)
         layout.addWidget(self.exp2)
         layout.addWidget(self.exp3)
@@ -104,13 +93,11 @@ class saving_window(QWidget):
         self.daily_layout=QHBoxLayout()
         self.daily_layout.addLayout(layout)
         self.daily_layout.addLayout(layout2)
-        
-        pg1.setLayout(self.daily_layout)
-        self.master_layout.addWidget(pg1)
+     
         
         refresh.clicked.connect(self.refreshed)
         exited2.clicked.connect(self.quit)
        
-        self.setLayout(self.master_layout)
+        self.setLayout(self.daily_layout)
     
         self.refreshed()
