@@ -14,18 +14,11 @@ class expense_window(QWidget):
         self.money3=QTextEdit("")
         self.money4=QTextEdit("")
         self.money5=QTextEdit("")
-        self.money6=QTextEdit("")
-        self.l=[self.money,self.money2,self.money3,self.money4,self.money5,self.money6]
+        self.l=[self.money,self.money1,self.money2,self.money3,self.money4,self.money5]
         self.ti=income_window()
         self.l2=[]
         self.e_ui()
-    def quit_income(self):
-        self.t1.setText("")
-        self.t2.setText("")
-        self.t3.setText("")
-        self.t4.setText("")
-        self.close()
-    def save(self):   
+    def save(self):
         temp_income=income_window.temp_income
         for x in self.l:
             i=0                               
@@ -43,16 +36,24 @@ class expense_window(QWidget):
         temp_income["gifte"].append(self.l2[2])
         temp_income["foode"].append(self.l2[3])
         temp_income["housee"].append(self.l2[4])
+        temp_income["miscellaneouse"].append(self.l2[5])
         self.l2.clear()
         self.money.setText("")
+        self.money1.setText("")
         self.money2.setText("")
         self.money3.setText("")
         self.money4.setText("")
         self.money5.setText("")
-        self.money6.setText("")
+        
     def exit_deposit(self):
-      self.close()   
-    def e_ui(self):
+        self.money.setText("")
+        self.money1.setText("")
+        self.money2.setText("")
+        self.money3.setText("")
+        self.money4.setText("")
+        self.money5.setText("")
+        self.close()   
+    def e_ui(self): 
       self.setWindowTitle("Expesnes")
       self.resize(400,400)
       saved=QPushButton("Save")
@@ -61,13 +62,14 @@ class expense_window(QWidget):
       social=QRadioButton("Social Meeting")
       food=QRadioButton("Food")
       house=QRadioButton("Household expenses")
+      miscellaneous=QRadioButton("Miscellaneous")
       quit_deposit=QPushButton("EXIT")
       self.money.setMaximumSize(QSize(75,23))
+      self.money1.setMaximumSize(QSize(75,23))
       self.money2.setMaximumSize(QSize(75,23))
       self.money3.setMaximumSize(QSize(75,23))
       self.money4.setMaximumSize(QSize(75,23))
-      self.money5.setMaximumSize(QSize(50,20))
-      self.money6.setMaximumSize(QSize(75,23))
+      self.money5.setMaximumSize(QSize(75,23))
       quit_deposit.setMaximumSize(QSize(100,50))
       quit_deposit.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
       
@@ -78,6 +80,7 @@ class expense_window(QWidget):
       line3=QHBoxLayout()
       line4=QHBoxLayout()
       line5=QHBoxLayout()
+      line6=QHBoxLayout()
       line_exit=QHBoxLayout()
 
       line1.addWidget(travel,1,Qt.AlignLeft)
@@ -90,6 +93,8 @@ class expense_window(QWidget):
       line4.addWidget(self.money4)
       line5.addWidget(social,1,Qt.AlignLeft)
       line5.addWidget(self.money6)
+      line6.addWidget(miscellaneous,1,Qt.AlignLeft)
+      line6.addWidget(self.money5)
       line_exit.addWidget(quit_deposit,1,Qt.AlignCenter)
       
       
@@ -99,6 +104,7 @@ class expense_window(QWidget):
       layout.addLayout(line3)
       layout.addLayout(line4)
       layout.addLayout(line5)
+      layout.addLayout(line6)
       layout.addLayout(line_exit)
       layout.addWidget(saved,0,Qt.AlignCenter)
    
