@@ -34,13 +34,16 @@ class saving_window(QWidget):
         self.tempt3=sum(self.temp["sociale"])
         self.tempt4=sum(self.temp["foode"])
         self.tempt5=sum(self.temp["housee"])
-        tt=self.tempt1+self.tempt2+self.tempt3+self.tempt4
+        self.tempt6=sum(self.temp["miscellaneouse"])
+        tt=self.tempt1+self.tempt2+self.tempt3+self.tempt4+self.tempt5+self.tempt6
         self.inc1.setText("Travel is "+str(self.tempt1))
         self.inc2.setText("gift is "+str(self.tempt2))
         self.inc3.setText("Social  is "+str(self.tempt3))
         self.inc4.setText("Food  are "+str(self.tempt4))
         self.inc5.setText("House expenses are "+str(self.tempt5))
+        self.inc6.setText("Miscellaneous expenses are "+str(self.tempt6))
         self.tinc.setText("Total expense is "+str(tt))
+    
     def s_ui(self):
         
         self.setWindowTitle("Savings")
@@ -57,9 +60,7 @@ class saving_window(QWidget):
         refresh=QPushButton("REFRESH")
         
         layout.addWidget(refresh)
-       
-        
-        
+   
         exited2=QPushButton("EXIT")
         
         self.inc1=QLabel()  
@@ -67,6 +68,7 @@ class saving_window(QWidget):
         self.inc3=QLabel()
         self.inc4=QLabel()
         self.inc5=QLabel()
+        self.inc6=QLabel()
         self.tinc=QLabel()
         
         self.master_layout=QStackedLayout()
@@ -76,9 +78,9 @@ class saving_window(QWidget):
         layout2.addWidget(self.inc3)
         layout2.addWidget(self.inc4)
         layout2.addWidget(self.inc5)
+        layout2.addWidget(self.inc6)
         layout2.addWidget(self.tinc)
         layout2.addWidget(exited2)
-        
 
         self.select_window=QMainWindow()
         self.select_window.resize(75,50)
@@ -106,11 +108,8 @@ class saving_window(QWidget):
         pg1.setLayout(self.daily_layout)
         self.master_layout.addWidget(pg1)
         
-        
-        
         refresh.clicked.connect(self.refreshed)
         exited2.clicked.connect(self.quit)
-       
        
         self.setLayout(self.master_layout)
     
