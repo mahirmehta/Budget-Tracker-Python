@@ -23,11 +23,11 @@ class saving_window(QWidget):
         self.tempt3=sum(self.temp["gifti"])
         self.tempt4=sum(self.temp["otheri"])
         tt=self.tempt1+self.tempt2+self.tempt3+self.tempt4
-        self.exp1.setText("Income is "+str(self.tempt1))
-        self.exp2.setText("Allowance is "+str(self.tempt2))
-        self.exp3.setText("Gift money is "+str(self.tempt3))
-        self.exp4.setText("Other expenses are "+str(self.tempt4))
-        self.texp.setText("Total income is "+str(tt))
+        self.exp1.setText("Income received is RS "+str(self.tempt1))
+        self.exp2.setText("Allowance is Rs "+str(self.tempt2))
+        self.exp3.setText("Gift money received is Rs "+str(self.tempt3))
+        self.exp4.setText("Other icnome are Rs "+str(self.tempt4))
+        self.texp.setText("Total income is Rs "+str(tt))
         
         self.tempt1=sum(self.temp["travele"])
         self.tempt2=sum(self.temp["gifte"])
@@ -36,13 +36,13 @@ class saving_window(QWidget):
         self.tempt5=sum(self.temp["housee"])
         self.tempt6=sum(self.temp["miscellaneouse"])
         tt=self.tempt1+self.tempt2+self.tempt3+self.tempt4+self.tempt5+self.tempt6
-        self.inc1.setText("Travel is "+str(self.tempt1))
-        self.inc2.setText("gift is "+str(self.tempt2))
-        self.inc3.setText("Social  is "+str(self.tempt3))
-        self.inc4.setText("Food  are "+str(self.tempt4))
-        self.inc5.setText("House expenses are "+str(self.tempt5))
-        self.inc6.setText("Miscellaneous expenses are "+str(self.tempt6))
-        self.tinc.setText("Total expense is "+str(tt))
+        self.inc1.setText("Travel expense is Rs "+str(self.tempt1))
+        self.inc2.setText("Gifting expense is Rs "+str(self.tempt2))
+        self.inc3.setText("Social expenses is Rs "+str(self.tempt3))
+        self.inc4.setText("Food expenses are Rs "+str(self.tempt4))
+        self.inc5.setText("House expenses are Rs "+str(self.tempt5))
+        self.inc6.setText("Miscellaneous expenses are Rs "+str(self.tempt6))
+        self.tinc.setText("Total expense is Rs "+str(tt))
     
     def s_ui(self):
         
