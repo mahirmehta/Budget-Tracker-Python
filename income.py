@@ -4,7 +4,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
 class income_window(QWidget):
-    temp_income = {"incomei":[0],"pocketi":[0],"gifti":[0],"otheri":[0],"travele":[0],"gifte":[0],"sociale":[0],"foode":[0],"housee":[0]}
+    temp_income = {"incomei":[0],"pocketi":[0],"gifti":[0],"otheri":[0],"travele":[0],"gifte":[0],"sociale":[0],"foode":[0],"housee":[0],"miscellaneouse":[0]}
     def __init__(self):
         super().__init__()
         self.t1=QTextEdit("")
