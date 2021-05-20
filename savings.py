@@ -42,7 +42,7 @@ class saving_window(QWidget):
         self.inc2.setText("Gifting expense is Rs "+str(self.tempt2))
         self.inc3.setText("Social expenses is Rs "+str(self.tempt3))
         self.inc4.setText("Food expenses are Rs "+str(self.tempt4))
-        self.inc5.setText("House expenses are Rs"+str(self.tempt5))
+        self.inc5.setText("House expenses are Rs "+str(self.tempt5))
         self.inc6.setText("Miscellaneous expenses are Rs "+str(self.tempt6))
         self.tinc.setText("Total expense is Rs "+str(tt))
         
@@ -60,9 +60,8 @@ class saving_window(QWidget):
         self.texp=QLabel()
         layout=QVBoxLayout()
         layout2=QVBoxLayout()
+        layout3=QHBoxLayout()
         refresh=QPushButton("REFRESH")
-        
-        layout.addWidget(refresh)
    
         exited2=QPushButton("EXIT")
         
@@ -75,8 +74,6 @@ class saving_window(QWidget):
         self.tinc=QLabel()
         self.tsav=QLabel()
         
-    
-        
         layout2.addWidget(self.inc1)
         layout2.addWidget(self.inc2)
         layout2.addWidget(self.inc3)
@@ -84,10 +81,9 @@ class saving_window(QWidget):
         layout2.addWidget(self.inc5)
         layout2.addWidget(self.inc6)
         layout2.addWidget(self.tinc)
-        layout2.addWidget(self.tsav)
-        layout2.addWidget(exited2)
 
-        
+        layout3.addWidget(refresh)
+        layout3.addWidget(exited2)
    
         layout.addWidget(self.exp1)
         layout.addWidget(self.exp2)
@@ -98,11 +94,16 @@ class saving_window(QWidget):
         self.daily_layout=QHBoxLayout()
         self.daily_layout.addLayout(layout)
         self.daily_layout.addLayout(layout2)
+
+        main_layout=QVBoxLayout()
+        main_layout.addLayout(self.daily_layout)
+        main_layout.addWidget(self.tsav,0,Qt.AlignCenter)
+        main_layout.addLayout(layout3)
      
         
         refresh.clicked.connect(self.refreshed)
         exited2.clicked.connect(self.quit)
        
-        self.setLayout(self.daily_layout)
+        self.setLayout(main_layout)
     
         self.refreshed()
