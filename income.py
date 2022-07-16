@@ -50,7 +50,7 @@ class income_window(QWidget):
 
     def i_ui(self):
         self.setWindowTitle("Income")
-        self.resize(400,400)
+        self.resize(500,500)
         label1=QLabel("Income")
         label2=QLabel("Pocket Money")
         label3=QLabel("Gifts")
