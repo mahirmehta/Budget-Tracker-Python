@@ -59,7 +59,7 @@ class expense_window(QWidget):
         self.close()   
     def e_ui(self): 
       self.setWindowTitle("Expesnes")
-      self.resize(400,400)
+      self.resize(500,500)
       saved=QPushButton("Save")
       travel=QRadioButton("Travel")
       gift=QRadioButton("Gift")
