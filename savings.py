@@ -50,7 +50,7 @@ class saving_window(QWidget):
     def s_ui(self):
         
         self.setWindowTitle("Savings")
-        self.resize(400,400)
+        self.resize(500,500)
         self.goback=QPushButton("Go back")
        
         self.exp1=QLabel()  
