@@ -27,8 +27,8 @@ class MainWindow(QWidget):
          self.close()
 
     def ui(self):
-     self.setWindowTitle("Python Project(029,030,041)")
-     self.resize(400,400)
+     self.setWindowTitle("Budget Tracker")
+     self.resize(500,500)
      
      
      #adding widgets
@@ -45,7 +45,7 @@ class MainWindow(QWidget):
 
      #setting widgets size
      intro.setMinimumSize(QSize(10,10))
-     intro.setFont(QFont("Times New Roman",18))
+     intro.setFont(QFont("Times New Roman",28))
      button1.setMinimumSize(QSize(100,50))
      button2.setMinimumSize(QSize(100,50))
      button3.setMinimumSize(QSize(100,50))
