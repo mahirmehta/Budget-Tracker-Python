@@ -33,10 +33,10 @@ class MainWindow(QWidget):
      
      #adding widgets
      intro=QLabel("BUDGET TRACKER")
-     button1=QPushButton("Expenditure")
-     button2= QPushButton("Income")
-     button3=QPushButton("Savings ")
-     button5=QPushButton("Exit")
+     button1=QPushButton("EXPENDITURE")
+     button2= QPushButton("INCOME")
+     button3=QPushButton("SAVINGS")
+     button5=QPushButton("EXIT")
 
      button1.clicked.connect(lambda x:self.show_window(self.w1))
      button2.clicked.connect(lambda x:self.show_window(self.w2))
@@ -46,10 +46,10 @@ class MainWindow(QWidget):
      #setting widgets size
      intro.setMinimumSize(QSize(10,10))
      intro.setFont(QFont("Times New Roman",28))
-     button1.setMinimumSize(QSize(100,50))
-     button2.setMinimumSize(QSize(100,50))
-     button3.setMinimumSize(QSize(100,50))
-     button5.setMaximumSize(QSize(100,50))
+     button1.setMinimumSize(QSize(125,75))
+     button2.setMinimumSize(QSize(125,75))
+     button3.setMinimumSize(QSize(125,75))
+     button5.setMaximumSize(QSize(125,75))
      intro.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
      button1.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
      button2.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
