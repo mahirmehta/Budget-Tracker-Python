@@ -9,7 +9,6 @@ class saving_window(QWidget):
        
         self.d= income_window()
         
-        
         self.s_ui()
 
     def quit(self):
@@ -24,11 +23,11 @@ class saving_window(QWidget):
         self.tempt4=sum(self.temp["otheri"])
         tt=self.tempt1+self.tempt2+self.tempt3+self.tempt4
         sav=tt
-        self.exp1.setText("Income received is RS "+str(self.tempt1))
-        self.exp2.setText("Allowance is Rs "+str(self.tempt2))
-        self.exp3.setText("Gift money received is Rs "+str(self.tempt3))
-        self.exp4.setText("Other icnome are Rs"+str(self.tempt4))
-        self.texp.setText("Total income is "+str(tt))
+        self.exp1.setText("Income received ₹ "+str(self.tempt1))
+        self.exp2.setText("Allowance is ₹ "+str(self.tempt2))
+        self.exp3.setText("Gift money received is ₹ "+str(self.tempt3))
+        self.exp4.setText("Other icnome are ₹ "+str(self.tempt4))
+        self.texp.setText("Total income is ₹ "+str(tt))
         
         self.tempt1=sum(self.temp["travele"])
         self.tempt2=sum(self.temp["gifte"])
@@ -38,15 +37,15 @@ class saving_window(QWidget):
         self.tempt6=sum(self.temp["miscellaneouse"])
         tt=self.tempt1+self.tempt2+self.tempt3+self.tempt4+self.tempt5+self.tempt6
         sav=sav-tt
-        self.inc1.setText("Travel expense is Rs "+str(self.tempt1))
-        self.inc2.setText("Gifting expense is Rs "+str(self.tempt2))
-        self.inc3.setText("Social expenses is Rs "+str(self.tempt3))
-        self.inc4.setText("Food expenses are Rs "+str(self.tempt4))
-        self.inc5.setText("House expenses are Rs "+str(self.tempt5))
-        self.inc6.setText("Miscellaneous expenses are Rs "+str(self.tempt6))
-        self.tinc.setText("Total expense is Rs "+str(tt))
+        self.inc1.setText("Travel expenses iare ₹ "+str(self.tempt1))
+        self.inc2.setText("Gifting expenses are ₹ "+str(self.tempt2))
+        self.inc3.setText("Social expenses are ₹ "+str(self.tempt3))
+        self.inc4.setText("Food expenses are ₹ "+str(self.tempt4))
+        self.inc5.setText("House expenses are ₹ "+str(self.tempt5))
+        self.inc6.setText("Miscellaneous expenses are ₹ "+str(self.tempt6))
+        self.tinc.setText("Total expense is ₹ "+str(tt))
         
-        self.tsav.setText("Total savings are Rs "+str(sav))
+        self.tsav.setText("Total savings are ₹ "+str(sav))
     def s_ui(self):
         
         self.setWindowTitle("Savings")
