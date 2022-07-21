@@ -49,19 +49,19 @@ class income_window(QWidget):
         self.t4.setText("")
 
     def i_ui(self):
-        self.setWindowTitle("Income")
+        self.setWindowTitle("INCOME")
         self.resize(500,500)
         label1=QLabel("Income")
         label2=QLabel("Pocket Money")
         label3=QLabel("Gifts")
         label4=QLabel("Other")
-        add=QPushButton("Save")
-        exit_deposit=QPushButton("Exit")
+        add=QPushButton("SAVE")
+        exit_deposit=QPushButton("EXIT")
               
-        self.t1.setMaximumSize(QSize(80,24))
-        self.t2.setMaximumSize(QSize(80,24))
-        self.t3.setMaximumSize(QSize(80,24))
-        self.t4.setMaximumSize(QSize(80,24))
+        self.t1.setMaximumSize(QSize(120,24))
+        self.t2.setMaximumSize(QSize(120,24))
+        self.t3.setMaximumSize(QSize(120,24))
+        self.t4.setMaximumSize(QSize(120,24))
 
         layout=QVBoxLayout()
         l1=QHBoxLayout()
