@@ -11,7 +11,6 @@ class MainWindow(QWidget):
      super().__init__()
      
      self.w1=expense_window()
-     
      self.w2=income_window()
      self.w3=saving_window()
      self.w3.close()
